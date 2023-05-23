@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown" @click.stop="toggleDropdown">
+  <div class="dropdown">
     <div class="dropdown__container">
       <div class="dropdown__header">
         <button class="dropdown__btn" @click="toggleDropdown">
@@ -44,7 +44,7 @@ export default {
         dropdownContent.style.opacity = '0'
         setTimeout(() => {
           dropdownContent.style.visibility = 'hidden'
-        }, 100)
+        }, 200)
       } else {
         dropdownContent.style.top = '45px'
         dropdownContent.style.opacity = '1'
@@ -78,10 +78,11 @@ ul, li {
 
     min-width: 100%;
     padding: 10px 0;
-    background-color: #edf2f7;
+    background-color: #ffffff;
     border-radius: 10px;
 
     transition: top .2s linear, opacity .2s linear;
+    box-shadow: -5px 4px 8px 0px rgba(34, 60, 80, 0.2);
   }
   &__content .open {
     top: calc(100% + 15px);
@@ -97,7 +98,7 @@ ul, li {
     display: flex;
     transition: background-color .1s linear;
     &:hover {
-      background-color: #b4e3fb;
+      background-color: #eeeeee;
     }
   }
   &__content-link {
