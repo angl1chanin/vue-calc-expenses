@@ -1,10 +1,10 @@
 <template>
   <div class="app">
-    <NavSidebar />
+    <NavSidebar class="app__nav" />
     <div class="app__content">
       <router-view/>
     </div>
-    <MenuSidebar />
+    <MenuSidebar class="app__menu" />
   </div>
 </template>
 
@@ -40,10 +40,15 @@ body {
 .app {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  
+  &__nav {
+    box-shadow: 5px 0px 15px 0px rgba(34, 60, 80, 0.2);
+  }
   &__content {
     padding: 10px;
     background-color: #F4F6F8;
+  }
+  &__menu {
+    box-shadow: -5px 0px 15px 0px rgba(34, 60, 80, 0.2);
   }
 }
 
